@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eleganté | Luxury Perfumes</title>
+<meta name="description" content="Discover your signature scent with Eleganté's luxury perfume collection. Handcrafted fragrances for the discerning individual.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#D4AF37',secondary:'#010203'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+color: #333;
+background-color: #FAF9F8;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+}
+.hero {
+background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://readdy.ai/api/search-image?query=Luxury%20perfume%20bottles%20arranged%20elegantly%20on%20a%20minimalist%20white%20marble%20surface%20with%20soft%20golden%20lighting%20and%20subtle%20reflections.%20The%20composition%20features%20high-end%20glass%20bottles%20with%20gold%20accents%2C%20creating%20an%20atmosphere%20of%20sophistication%20and%20exclusivity.%20The%20background%20has%20a%20gentle%20gradient%20from%20white%20to%20cream%2C%20enhancing%20the%20premium%20feel%20of%20the%20luxury%20perfume%20products.&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+height: 100vh;
+min-height: 600px;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #D4AF37;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.custom-btn {
+transition: all 0.3s ease;
+}
+.custom-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+.collection-card {
+transition: transform 0.5s ease, box-shadow 0.5s ease;
+overflow: hidden;
+}
+.collection-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.collection-card img {
+transition: transform 0.8s ease;
+}
+.collection-card:hover img {
+transform: scale(1.05);
+}
+.product-card {
+transition: all 0.3s ease;
+}
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.quick-view {
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.product-card:hover .quick-view {
+opacity: 1;
+}
+.testimonial-slider {
+overflow-x: hidden;
+}
+.testimonial-slide {
+min-width: 100%;
+transition: transform 0.5s ease;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-radio {
+display: none;
+}
+.custom-radio + label {
+position: relative;
+padding-left: 28px;
+cursor: pointer;
+display: inline-block;
+line-height: 20px;
+}
+.custom-radio + label:before {
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 20px;
+height: 20px;
+border: 2px solid #D4AF37;
+border-radius: 50%;
+background: transparent;
+}
+.custom-radio:checked + label:after {
+content: '';
+position: absolute;
+left: 5px;
+top: 5px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: #D4AF37;
+}
+.newsletter-input {
+border-bottom: 1px solid #D4AF37;
+transition: border-color 0.3s ease;
+}
+.newsletter-input:focus {
+border-color: #010203;
+outline: none;
+}
+.parallax {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+@media (max-width: 768px) {
+.parallax {
+background-attachment: scroll;
+}
+}
+</style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent" id="navbar">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-white">Eleganté</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+<a href="#shop" class="nav-link text-white hover:text-primary transition-colors">Shop</a>
+<a href="#about" class="nav-link text-white hover:text-primary transition-colors">About</a>
+<a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+<div class="flex items-center space-x-4">
+<button class="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors">
+<i class="ri-search-line ri-lg"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors">
+<i class="ri-user-line ri-lg"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-white hover:text-primary transition-colors relative" id="cartButton">
+<i class="ri-shopping-bag-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden w-8 h-8 flex items-center justify-center text-white" id="mobileMenuButton">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Navigation -->
+<div class="md:hidden bg-white absolute w-full left-0 top-full shadow-lg transform -translate-y-full opacity-0 transition-all duration-300 pointer-events-none" id="mobileMenu">
+<div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+<a href="#" class="text-secondary hover:text-primary transition-colors py-2">Home</a>
+<a href="#shop" class="text-secondary hover:text-primary transition-colors py-2">Shop</a>
+<a href="#about" class="text-secondary hover:text-primary transition-colors py-2">About</a>
+<a href="#contact" class="text-secondary hover:text-primary transition-colors py-2">Contact</a>
+<div class="flex items-center space-x-6 py-2">
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition-colors">
+<i class="ri-search-line ri-lg"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition-colors">
+<i class="ri-user-line ri-lg"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-secondary hover:text-primary transition-colors relative">
+<i class="ri-shopping-bag-line ri-lg"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero flex items-center justify-center">
+<div class="container mx-auto px-6 text-center">
+<h1 class="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Signature Scent</h1>
+<p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto">Handcrafted luxury fragrances that capture the essence of sophistication and elegance.</p>
+<a href="#shop" class="custom-btn bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 inline-block whitespace-nowrap">Explore Collection</a>
+</div>
+</section>
+<!-- Featured Collections -->
+<section class="py-20 bg-white" id="shop">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Featured Collections</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore our curated collections of exquisite fragrances, each telling a unique story of sophistication and allure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Collection 1 -->
+<div class="collection-card rounded overflow-hidden shadow-lg">
+<div class="h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20floral%20elements%20around%20it.%20The%20bottle%20is%20elegant%20with%20gold%20accents%20on%20a%20white%20marble%20surface.%20The%20composition%20features%20soft%20lighting%20with%20subtle%20reflections%2C%20creating%20an%20atmosphere%20of%20sophistication.%20The%20background%20transitions%20from%20white%20to%20a%20soft%20pink%20hue%2C%20enhancing%20the%20feminine%20and%20floral%20theme%20of%20the%20luxury%20perfume%20product.&width=600&height=800&seq=2&orientation=portrait" alt="Floral Collection" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-2xl font-bold text-secondary mb-2">Floral Essence</h3>
+<p class="text-gray-600 mb-4">Delicate floral notes that evoke the beauty of blooming gardens.</p>
+<a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+Discover Collection
+<i class="ri-arrow-right-line ri-sm ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Collection 2 -->
+<div class="collection-card rounded overflow-hidden shadow-lg">
+<div class="h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20woody%20elements%20around%20it.%20The%20bottle%20is%20masculine%20and%20elegant%20with%20dark%20accents%20on%20a%20dark%20marble%20surface.%20The%20composition%20features%20dramatic%20lighting%20with%20subtle%20reflections%2C%20creating%20an%20atmosphere%20of%20sophistication%20and%20mystery.%20The%20background%20transitions%20from%20dark%20to%20a%20soft%20amber%20hue%2C%20enhancing%20the%20woody%20and%20masculine%20theme%20of%20the%20luxury%20perfume%20product.&width=600&height=800&seq=3&orientation=portrait" alt="Woody Collection" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-2xl font-bold text-secondary mb-2">Woody Elegance</h3>
+<p class="text-gray-600 mb-4">Rich, warm woody notes that exude sophistication and depth.</p>
+<a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+Discover Collection
+<i class="ri-arrow-right-line ri-sm ml-1"></i>
+</a>
+</div>
+</div>
+<!-- Collection 3 -->
+<div class="collection-card rounded overflow-hidden shadow-lg">
+<div class="h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20oriental%20elements%20around%20it.%20The%20bottle%20is%20exotic%20and%20elegant%20with%20gold%20and%20gemstone%20accents%20on%20a%20black%20marble%20surface.%20The%20composition%20features%20warm%20lighting%20with%20subtle%20reflections%2C%20creating%20an%20atmosphere%20of%20luxury%20and%20mystery.%20The%20background%20transitions%20from%20black%20to%20a%20soft%20gold%20hue%2C%20enhancing%20the%20oriental%20and%20exotic%20theme%20of%20the%20luxury%20perfume%20product.&width=600&height=800&seq=4&orientation=portrait" alt="Oriental Collection" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6 text-center">
+<h3 class="text-2xl font-bold text-secondary mb-2">Oriental Mystery</h3>
+<p class="text-gray-600 mb-4">Exotic spices and resins that transport you to distant lands.</p>
+<a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+Discover Collection
+<i class="ri-arrow-right-line ri-sm ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Arrivals -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">New Arrivals</h2>
+<p class="text-gray-600">Discover our latest luxury fragrances</p>
+</div>
+<div class="hidden md:flex space-x-2">
+<button id="prevProduct" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full hover:border-primary hover:text-primary transition-colors">
+<i class="ri-arrow-left-s-line ri-lg"></i>
+</button>
+<button id="nextProduct" class="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full hover:border-primary hover:text-primary transition-colors">
+<i class="ri-arrow-right-s-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="product-card bg-white rounded shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20a%20sophisticated%20design%20on%20a%20minimalist%20white%20background.%20The%20bottle%20has%20a%20tall%2C%20elegant%20shape%20with%20gold%20accents%20and%20a%20crystal-clear%20glass%20body%20containing%20amber-colored%20liquid.%20The%20composition%20features%20soft%2C%20professional%20lighting%20highlighting%20the%20bottles%20premium%20craftsmanship%20and%20the%20liquids%20rich%20color.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20luxury%20product%20photography.&width=500&height=600&seq=5&orientation=portrait" alt="Amber Royale Perfume" class="w-full h-full object-cover object-top">
+<div class="quick-view absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<button class="bg-white text-secondary px-4 py-2 !rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-secondary">Amber Royale</h3>
+<p class="text-gray-600 text-sm mb-2">Eau de Parfum</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-medium">$195.00</span>
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card bg-white rounded shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20a%20sophisticated%20design%20on%20a%20minimalist%20white%20background.%20The%20bottle%20has%20a%20unique%2C%20artistic%20shape%20with%20silver%20accents%20and%20a%20crystal-clear%20glass%20body%20containing%20light%20blue%20liquid.%20The%20composition%20features%20soft%2C%20professional%20lighting%20highlighting%20the%20bottles%20premium%20craftsmanship%20and%20the%20liquids%20refreshing%20color.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20luxury%20product%20photography.&width=500&height=600&seq=6&orientation=portrait" alt="Azure Dreams Perfume" class="w-full h-full object-cover object-top">
+<div class="quick-view absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<button class="bg-white text-secondary px-4 py-2 !rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-secondary">Azure Dreams</h3>
+<p class="text-gray-600 text-sm mb-2">Eau de Parfum</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-medium">$175.00</span>
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card bg-white rounded shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20a%20sophisticated%20design%20on%20a%20minimalist%20white%20background.%20The%20bottle%20has%20a%20round%2C%20feminine%20shape%20with%20rose%20gold%20accents%20and%20a%20crystal-clear%20glass%20body%20containing%20light%20pink%20liquid.%20The%20composition%20features%20soft%2C%20professional%20lighting%20highlighting%20the%20bottles%20premium%20craftsmanship%20and%20the%20liquids%20delicate%20color.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20luxury%20product%20photography.&width=500&height=600&seq=7&orientation=portrait" alt="Rose Elixir Perfume" class="w-full h-full object-cover object-top">
+<div class="quick-view absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<button class="bg-white text-secondary px-4 py-2 !rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-secondary">Rose Elixir</h3>
+<p class="text-gray-600 text-sm mb-2">Eau de Parfum</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-medium">$185.00</span>
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card bg-white rounded shadow-md overflow-hidden">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20a%20sophisticated%20design%20on%20a%20minimalist%20white%20background.%20The%20bottle%20has%20a%20tall%2C%20masculine%20shape%20with%20dark%20accents%20and%20a%20crystal-clear%20glass%20body%20containing%20deep%20green%20liquid.%20The%20composition%20features%20soft%2C%20professional%20lighting%20highlighting%20the%20bottles%20premium%20craftsmanship%20and%20the%20liquids%20rich%20color.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20luxury%20product%20photography.&width=500&height=600&seq=8&orientation=portrait" alt="Emerald Noir Perfume" class="w-full h-full object-cover object-top">
+<div class="quick-view absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+<button class="bg-white text-secondary px-4 py-2 !rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">Quick View</button>
+</div>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-secondary">Emerald Noir</h3>
+<p class="text-gray-600 text-sm mb-2">Eau de Parfum</p>
+<div class="flex justify-between items-center">
+<span class="text-primary font-medium">$210.00</span>
+<button class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+<i class="ri-shopping-bag-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a href="#" class="custom-btn border border-primary text-primary px-8 py-3 !rounded-button font-medium hover:bg-primary hover:text-white transition-colors inline-block whitespace-nowrap">View All Products</a>
+</div>
+</div>
+</section>
+<!-- Brand Story -->
+<section class="py-20 parallax bg-fixed" id="about" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20laboratory%20with%20elegant%20glass%20equipment%20and%20ingredients.%20The%20scene%20shows%20a%20sophisticated%20perfumer%20working%20with%20essential%20oils%20and%20fragrance%20compounds%20in%20a%20high-end%20atelier.%20The%20space%20features%20marble%20countertops%2C%20brass%20instruments%2C%20and%20beautiful%20glass%20containers%20with%20various%20colored%20liquids.%20The%20lighting%20is%20warm%20and%20golden%2C%20creating%20an%20atmosphere%20of%20craftsmanship%20and%20luxury.%20The%20composition%20highlights%20the%20artisanal%20process%20of%20creating%20high-end%20perfumes.&width=1920&height=1080&seq=9&orientation=landscape')">
+<div class="container mx-auto px-6">
+<div class="max-w-2xl mx-auto text-center text-white">
+<h2 class="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
+<p class="text-lg mb-8 leading-relaxed">Founded in 2010, Eleganté was born from a passion for artisanal perfumery and a desire to create fragrances that tell a story. Our master perfumers blend the finest ingredients from around the world, creating scents that capture moments, emotions, and memories.</p>
+<p class="text-lg mb-10 leading-relaxed">Each Eleganté fragrance is meticulously crafted in our atelier in Paris, where tradition meets innovation. We believe that a signature scent is more than just a perfume—it's an extension of your identity, a silent yet powerful expression of who you are.</p>
+<a href="#" class="custom-btn bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 inline-block whitespace-nowrap">Learn More</a>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">What Our Customers Say</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover why our customers love Eleganté fragrances</p>
+</div>
+<div class="relative">
+<div class="testimonial-slider flex transition-transform duration-500 ease-in-out" id="testimonialSlider">
+<!-- Testimonial 1 -->
+<div class="testimonial-slide px-4">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20sophisticated%20woman%20in%20her%2030s%20with%20elegant%20styling%2C%20neutral%20background%2C%20warm%20lighting%2C%20subtle%20makeup%2C%20and%20a%20confident%20expression.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20a%20testimonial.&width=200&height=200&seq=10&orientation=squarish" alt="Emily Richardson" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold text-secondary">Emily Richardson</h4>
+<p class="text-gray-600 text-sm">New York, USA</p>
+</div>
+<div class="ml-auto flex text-primary">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"Amber Royale has become my signature scent. I receive compliments everywhere I go. The fragrance lasts all day and evolves beautifully. The packaging is just as luxurious as the scent itself. Worth every penny!"</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-slide px-4">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20sophisticated%20man%20in%20his%2040s%20with%20elegant%20styling%2C%20neutral%20background%2C%20warm%20lighting%2C%20and%20a%20confident%20expression.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20a%20testimonial.&width=200&height=200&seq=11&orientation=squarish" alt="James Wilson" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold text-secondary">James Wilson</h4>
+<p class="text-gray-600 text-sm">London, UK</p>
+</div>
+<div class="ml-auto flex text-primary">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"Emerald Noir is sophisticated yet bold. As someone who's tried countless luxury fragrances, I can confidently say this stands among the best. The customer service was exceptional, and the packaging was immaculate. Eleganté has gained a loyal customer."</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-slide px-4">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20sophisticated%20woman%20in%20her%2050s%20with%20elegant%20styling%2C%20neutral%20background%2C%20warm%20lighting%2C%20subtle%20makeup%2C%20and%20a%20confident%20expression.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20a%20testimonial.&width=200&height=200&seq=12&orientation=squarish" alt="Sophia Martinez" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-bold text-secondary">Sophia Martinez</h4>
+<p class="text-gray-600 text-sm">Paris, France</p>
+</div>
+<div class="ml-auto flex text-primary">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-half-fill ri-sm"></i>
+</div>
+</div>
+<p class="text-gray-700 italic">"Rose Elixir is unlike any rose fragrance I've tried before. It's sophisticated, modern, and long-lasting. The bottle is a work of art that I proudly display on my vanity. Shipping was fast and the presentation was exquisite."</p>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-8 space-x-2">
+<button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot active" data-index="0"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot" data-index="1"></button>
+<button class="w-3 h-3 rounded-full bg-gray-300 testimonial-dot" data-index="2"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-md">
+<div class="text-center mb-8">
+<h2 class="text-3xl font-bold text-secondary mb-4">Join Our Newsletter</h2>
+<p class="text-gray-600">Subscribe to receive exclusive offers, new product announcements, and fragrance inspiration.</p>
+</div>
+<form class="max-w-md mx-auto">
+<div class="flex flex-col md:flex-row gap-4">
+<input type="email" placeholder="Your email address" class="newsletter-input flex-1 px-4 py-3 bg-transparent text-gray-700 focus:outline-none border-none">
+<button type="submit" class="custom-btn bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 bg-white" id="contact">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-3xl md:text-4xl font-bold text-secondary mb-6">Get In Touch</h2>
+<p class="text-gray-600 mb-8">We'd love to hear from you. Contact us for any questions about our products, orders, or collaborations.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary mr-4">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Visit Us</h4>
+<p class="text-gray-600">8 Rue de la Paix, 75002 Paris, France</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary mr-4">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Email Us</h4>
+<p class="text-gray-600">contact@elegante-perfumes.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary mr-4">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Call Us</h4>
+<p class="text-gray-600">+33 1 42 60 38 20</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary mr-4">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-1">Opening Hours</h4>
+<p class="text-gray-600">Monday - Saturday: 10:00 AM - 7:00 PM</p>
+<p class="text-gray-600">Sunday: Closed</p>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="font-bold text-secondary mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-facebook-circle-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-twitter-x-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-600 hover:border-primary hover:text-primary transition-colors">
+<i class="ri-pinterest-line ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+<div>
+<form class="bg-gray-50 p-8 rounded-lg">
+<h3 class="text-2xl font-bold text-secondary mb-6">Send Us a Message</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-gray-700 mb-2">Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:outline-none focus:border-primary">
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:outline-none focus:border-primary">
+</div>
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:outline-none focus:border-primary">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 bg-white border border-gray-200 rounded focus:outline-none focus:border-primary"></textarea>
+</div>
+<button type="submit" class="custom-btn bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 whitespace-nowrap">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">Eleganté</a>
+<p class="text-gray-400 mb-6">Discover luxury fragrances that tell a story and capture the essence of sophistication.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-facebook-circle-line ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-twitter-x-line ri-lg"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-primary transition-colors">
+<i class="ri-pinterest-line ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+<li><a href="#shop" class="text-gray-400 hover:text-primary transition-colors">Shop</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Customer Service</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">FAQs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Shipping & Returns</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms & Conditions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Track Order</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Contact Us</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-map-pin-line ri-lg mr-2 mt-1"></i>
+<span class="text-gray-400">8 Rue de la Paix, 75002 Paris, France</span>
+</li>
+<li class="flex items-start">
+<i class="ri-mail-line ri-lg mr-2 mt-1"></i>
+<span class="text-gray-400">contact@elegante-perfumes.com</span>
+</li>
+<li class="flex items-start">
+<i class="ri-phone-line ri-lg mr-2 mt-1"></i>
+<span class="text-gray-400">+33 1 42 60 38 20</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Eleganté. All rights reserved.</p>
+<div class="flex items-center space-x-4">
+<i class="ri-visa-fill ri-lg text-gray-400"></i>
+<i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+<i class="ri-paypal-fill ri-lg text-gray-400"></i>
+<i class="ri-apple-fill ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</footer>
+<!-- Cart Sidebar -->
+<div class="fixed top-0 right-0 h-full w-full md:w-96 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out" id="cartSidebar">
+<div class="h-full flex flex-col">
+<div class="p-6 border-b border-gray-200 flex justify-between items-center">
+<h3 class="text-xl font-bold text-secondary">Your Cart (3)</h3>
+<button id="closeCart" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-6">
+<!-- Cart Item 1 -->
+<div class="flex items-start mb-6 pb-6 border-b border-gray-200">
+<div class="w-20 h-20 rounded overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20amber%20liquid%20on%20a%20white%20background.%20The%20bottle%20has%20elegant%20gold%20accents%20and%20a%20sophisticated%20design.%20The%20image%20is%20clean%20and%20minimalist%2C%20focusing%20on%20the%20premium%20product.&width=200&height=200&seq=13&orientation=squarish" alt="Amber Royale" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-secondary mb-1">Amber Royale</h4>
+<p class="text-gray-600 text-sm mb-2">50ml</p>
+<div class="flex items-center">
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-subtract-line ri-sm"></i>
+</button>
+<span class="mx-3 text-gray-800">1</span>
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-add-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-medium">$195.00</span>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors mt-2 ml-auto">
+<i class="ri-delete-bin-line ri-sm"></i>
+</button>
+</div>
+</div>
+<!-- Cart Item 2 -->
+<div class="flex items-start mb-6 pb-6 border-b border-gray-200">
+<div class="w-20 h-20 rounded overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20light%20blue%20liquid%20on%20a%20white%20background.%20The%20bottle%20has%20elegant%20silver%20accents%20and%20a%20sophisticated%20design.%20The%20image%20is%20clean%20and%20minimalist%2C%20focusing%20on%20the%20premium%20product.&width=200&height=200&seq=14&orientation=squarish" alt="Azure Dreams" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-secondary mb-1">Azure Dreams</h4>
+<p class="text-gray-600 text-sm mb-2">50ml</p>
+<div class="flex items-center">
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-subtract-line ri-sm"></i>
+</button>
+<span class="mx-3 text-gray-800">1</span>
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-add-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-medium">$175.00</span>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors mt-2 ml-auto">
+<i class="ri-delete-bin-line ri-sm"></i>
+</button>
+</div>
+</div>
+<!-- Cart Item 3 -->
+<div class="flex items-start">
+<div class="w-20 h-20 rounded overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20deep%20green%20liquid%20on%20a%20white%20background.%20The%20bottle%20has%20elegant%20dark%20accents%20and%20a%20sophisticated%20design.%20The%20image%20is%20clean%20and%20minimalist%2C%20focusing%20on%20the%20premium%20product.&width=200&height=200&seq=15&orientation=squarish" alt="Emerald Noir" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-secondary mb-1">Emerald Noir</h4>
+<p class="text-gray-600 text-sm mb-2">50ml</p>
+<div class="flex items-center">
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-subtract-line ri-sm"></i>
+</button>
+<span class="mx-3 text-gray-800">1</span>
+<button class="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-full text-gray-600">
+<i class="ri-add-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="text-right">
+<span class="text-primary font-medium">$210.00</span>
+<button class="w-6 h-6 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors mt-2 ml-auto">
+<i class="ri-delete-bin-line ri-sm"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-gray-200">
+<div class="flex justify-between items-center mb-4">
+<span class="text-gray-600">Subtotal</span>
+<span class="font-medium text-secondary">$580.00</span>
+</div>
+<div class="flex justify-between items-center mb-6">
+<span class="text-gray-600">Shipping</span>
+<span class="font-medium text-secondary">Calculated at checkout</span>
+</div>
+<a href="#" class="custom-btn bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 w-full text-center block whitespace-nowrap">Checkout</a>
+<button id="continueShopping" class="custom-btn border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:border-primary hover:text-primary transition-colors w-full mt-3 whitespace-nowrap">Continue Shopping</button>
+</div>
+</div>
+</div>
+<!-- Newsletter Popup -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="newsletterPopup">
+<div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 relative overflow-hidden">
+<button id="closePopup" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 z-10">
+<i class="ri-close-line ri-lg"></i>
+</button>
+<div class="p-8 relative z-10">
+<h3 class="text-2xl font-bold text-secondary mb-4">Join Our VIP List</h3>
+<p class="text-gray-600 mb-6">Subscribe to receive exclusive offers, early access to new releases, and a special 10% discount on your first order.</p>
+<form>
+<div class="mb-4">
+<input type="email" placeholder="Your email address" class="w-full px-4 py-3 border border-gray-200 rounded focus:outline-none focus:border-primary">
+</div>
+<button type="submit" class="custom-btn bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 w-full whitespace-nowrap">Subscribe Now</button>
+</form>
+<button id="declineNewsletter" class="custom-btn text-gray-500 hover:text-gray-700 px-6 py-3 w-full mt-3 font-medium whitespace-nowrap">No thanks, I'll skip the discount</button>
+<p class="text-gray-500 text-sm mt-4 text-center">By subscribing, you agree to our Privacy Policy and consent to receive updates from Eleganté.</p>
+</div>
+<div class="absolute top-0 right-0 w-1/3 h-full" style="background-image: url('https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20gold%20accents%20on%20a%20white%20background%20with%20soft%20shadows.%20The%20image%20is%20elegant%20and%20minimalist%2C%20showing%20just%20a%20portion%20of%20the%20bottle%20with%20a%20focus%20on%20its%20premium%20design%20details.&width=300&height=600&seq=16&orientation=portrait'); background-size: cover; background-position: center;"></div>
+</div>
+</div>
+<!-- Quick View Modal -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden" id="quickViewModal">
+<div class="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 relative">
+<button id="closeQuickView" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700">
+<i class="ri-close-line ri-lg"></i>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+<div class="p-8 flex items-center justify-center bg-gray-50">
+<img src="https://readdy.ai/api/search-image?query=A%20luxury%20perfume%20bottle%20with%20amber%20liquid%20on%20a%20minimalist%20white%20background.%20The%20bottle%20has%20a%20tall%2C%20elegant%20shape%20with%20gold%20accents%20and%20a%20crystal-clear%20glass%20body.%20The%20composition%20features%20soft%2C%20professional%20lighting%20highlighting%20the%20bottles%20premium%20craftsmanship%20and%20the%20liquids%20rich%20color.%20The%20image%20has%20a%20clean%2C%20high-end%20aesthetic%20suitable%20for%20luxury%20product%20photography.&width=500&height=600&seq=17&orientation=portrait" alt="Amber Royale" class="max-h-96 object-contain">
+</div>
+<div class="p-8">
+<h3 class="text-2xl font-bold text-secondary mb-2">Amber Royale</h3>
+<p class="text-gray-600 mb-4">Eau de Parfum</p>
+<div class="flex text-primary mb-4">
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-fill ri-sm"></i>
+<i class="ri-star-half-fill ri-sm"></i>
+<span class="text-gray-600 text-sm ml-2">(42 reviews)</span>
+</div>
+<p class="text-xl text-primary font-medium mb-6">$195.00</p>
+<div class="mb-6">
+<h4 class="font-bold text-secondary mb-3">Size</h4>
+<div class="flex space-x-4">
+<div>
+<input type="radio" id="size-30ml" name="size" class="custom-radio" checked>
+<label for="size-30ml" class="text-gray-700">30ml</label>
+</div>
+<div>
+<input type="radio" id="size-50ml" name="size" class="custom-radio">
+<label for="size-50ml" class="text-gray-700">50ml</label>
+</div>
+<div>
+<input type="radio" id="size-100ml" name="size" class="custom-radio">
+<label for="size-100ml" class="text-gray-700">100ml</label>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h4 class="font-bold text-secondary mb-3">Quantity</h4>
+<div class="flex items-center border border-gray-300 rounded w-32">
+<button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary">
+<i class="ri-subtract-line ri-sm"></i>
+</button>
+<input type="number" value="1" min="1" class="w-12 h-10 text-center border-none focus:outline-none">
+<button class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary">
+<i class="ri-add-line ri-sm"></i>
+</button>
+</div>
+</div>
+<div class="flex space-x-4 mb-8">
+<button class="custom-btn bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 flex-1 whitespace-nowrap">Add to Cart</button>
+<button class="w-12 h-12 flex items-center justify-center border border-gray-300 rounded-full text-gray-600 hover:text-primary hover:border-primary transition-colors">
+<i class="ri-heart-line ri-lg"></i>
+</button>
+</div>
+<div>
+<h4 class="font-bold text-secondary mb-3">Description</h4>
+<p class="text-gray-600 mb-4">Amber Royale is a sophisticated blend of amber, vanilla, and exotic spices. This warm, opulent fragrance envelops you in a rich, sensual aura that lasts throughout the day.</p>
+<p class="text-gray-600">Top notes: Bergamot, Pink Pepper<br>
+Heart notes: Amber, Jasmine, Cinnamon<br>
+Base notes: Vanilla, Sandalwood, Musk</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlay for mobile menu and cart -->
+<div class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" id="overlay"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+navbar.classList.add('bg-white', 'shadow-md');
+navbar.classList.remove('bg-transparent');
+const navLinks = navbar.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+link.classList.remove('text-white');
+link.classList.add('text-secondary');
+});
+const icons = navbar.querySelectorAll('button i');
+icons.forEach(icon => {
+icon.parentElement.classList.remove('text-white');
+icon.parentElement.classList.add('text-secondary');
+});
+navbar.querySelector('a').classList.remove('text-white');
+navbar.querySelector('a').classList.add('text-secondary');
+} else {
+navbar.classList.remove('bg-white', 'shadow-md');
+navbar.classList.add('bg-transparent');
+const navLinks = navbar.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+link.classList.add('text-white');
+link.classList.remove('text-secondary');
+});
+const icons = navbar.querySelectorAll('button i');
+icons.forEach(icon => {
+icon.parentElement.classList.add('text-white');
+icon.parentElement.classList.remove('text-secondary');
+});
+navbar.querySelector('a').classList.add('text-white');
+navbar.querySelector('a').classList.remove('text-secondary');
+}
+});
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('transform-none');
+mobileMenu.classList.toggle('-translate-y-full');
+mobileMenu.classList.toggle('opacity-0');
+mobileMenu.classList.toggle('pointer-events-none');
+overlay.classList.toggle('hidden');
+});
+// Cart sidebar toggle
+const cartButton = document.getElementById('cartButton');
+const cartSidebar = document.getElementById('cartSidebar');
+const closeCart = document.getElementById('closeCart');
+const continueShopping = document.getElementById('continueShopping');
+function toggleCart() {
+cartSidebar.classList.toggle('translate-x-full');
+overlay.classList.toggle('hidden');
+}
+cartButton.addEventListener('click', toggleCart);
+closeCart.addEventListener('click', toggleCart);
+continueShopping.addEventListener('click', toggleCart);
+overlay.addEventListener('click', function() {
+if (!cartSidebar.classList.contains('translate-x-full')) {
+toggleCart();
+}
+if (!mobileMenu.classList.contains('-translate-y-full')) {
+mobileMenu.classList.add('-translate-y-full');
+mobileMenu.classList.add('opacity-0');
+mobileMenu.classList.add('pointer-events-none');
+mobileMenu.classList.remove('transform-none');
+overlay.classList.add('hidden');
+}
+if (!newsletterPopup.classList.contains('hidden')) {
+newsletterPopup.classList.add('hidden');
+}
+if (!quickViewModal.classList.contains('hidden')) {
+quickViewModal.classList.add('hidden');
+}
+});
+// Testimonial slider
+const testimonialSlider = document.getElementById('testimonialSlider');
+const testimonialDots = document.querySelectorAll('.testimonial-dot');
+let currentSlide = 0;
+function showSlide(index) {
+testimonialSlider.style.transform = `translateX(-${index * 100}%)`;
+testimonialDots.forEach((dot, i) => {
+if (i === index) {
+dot.classList.add('bg-primary');
+dot.classList.remove('bg-gray-300');
+} else {
+dot.classList.remove('bg-primary');
+dot.classList.add('bg-gray-300');
+}
+});
+currentSlide = index;
+}
+testimonialDots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+showSlide(index);
+});
+});
+// Auto slide testimonials
+setInterval(() => {
+currentSlide = (currentSlide + 1) % testimonialDots.length;
+showSlide(currentSlide);
+}, 5000);
+// Newsletter popup
+const newsletterPopup = document.getElementById('newsletterPopup');
+const closePopup = document.getElementById('closePopup');
+// Show popup after 5 seconds
+setTimeout(() => {
+newsletterPopup.classList.remove('hidden');
+}, 5000);
+closePopup.addEventListener('click', () => {
+newsletterPopup.classList.add('hidden');
+});
+const declineNewsletter = document.getElementById('declineNewsletter');
+declineNewsletter.addEventListener('click', () => {
+newsletterPopup.classList.add('hidden');
+});
+// Quick View functionality
+const quickViewButtons = document.querySelectorAll('.quick-view button');
+const quickViewModal = document.getElementById('quickViewModal');
+const closeQuickView = document.getElementById('closeQuickView');
+quickViewButtons.forEach(button => {
+button.addEventListener('click', () => {
+quickViewModal.classList.remove('hidden');
+});
+});
+closeQuickView.addEventListener('click', () => {
+quickViewModal.classList.add('hidden');
+});
+// Product carousel navigation
+const prevProduct = document.getElementById('prevProduct');
+const nextProduct = document.getElementById('nextProduct');
+const productCards = document.querySelectorAll('.product-card');
+prevProduct.addEventListener('click', () => {
+const firstCard = productCards[0];
+const lastCard = productCards[productCards.length - 1];
+firstCard.parentNode.insertBefore(lastCard, firstCard);
+});
+nextProduct.addEventListener('click', () => {
+const firstCard = productCards[0];
+const parent = firstCard.parentNode;
+parent.appendChild(firstCard);
+});
+});
+</script>
+</body>
+</html>
